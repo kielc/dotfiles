@@ -18,11 +18,6 @@ shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob # include files starting with '.' in filename expansion
 shopt -s histappend # append to the history file, don't overwrite it
 
-# gnu readline tab completion
-bind "set completion-ignore-case on" # ignore case
-bind "set completion-map-case on" # treat - and _ equivalently
-bind "set show-all-if-ambiguous on" # after first tab (instead of second)
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
