@@ -36,10 +36,10 @@ inoremap jk <esc>
 
 nnoremap <leader>w :update<CR>
 
-nnoremap <F4> :w<cr> :term python %<cr>
-nnoremap <F5> :w<cr> :term ipython -i %<cr>
-nnoremap <F6> :w<cr> :term pudb %<cr> 
-nnoremap <F7> :w<cr> :term flake8 %<cr>
+nnoremap <F4> :w<cr> :term python '%'<cr>
+nnoremap <F5> :w<cr> :term ipython -i '%'<cr>
+nnoremap <F6> :w<cr> :term pudb '%'<cr> 
+nnoremap <F7> :w<cr> :term flake8 '%'<cr>
 
 " Map D to run pydoc on current word
 nnoremap <buffer> D :<C-u>execute "term pydoc " . expand("<cword>")<CR>
