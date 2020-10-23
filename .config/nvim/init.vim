@@ -24,12 +24,13 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 autocmd TermOpen term://* startinsert
 autocmd TermOpen * setlocal nonumber norelativenumber
 
-" Highlight character in column 80 (pep8 79 character limit) 
+" highlight character in column 80 and 89 (pep8 79 and black 88 character limits) 
 " autocmd BufEnter *.* required because gruvbox overrides ctermbg to gray
 autocmd BufEnter *.* highlight ColorColumn ctermbg=DarkMagenta
 autocmd BufEnter *.* call matchadd('ColorColumn', '\%80v.', 100) 
+autocmd BufEnter *.* call matchadd('ColorColumn', '\%89v.', 100) 
 
-" Remove trailing whitespace when python file is written
+" remove trailing whitespace when python file is written
 autocmd BufWritePre *.py %s/\s\+$//e
 
 inoremap jk <esc>
@@ -41,12 +42,12 @@ nnoremap <F5> :w<cr> :term ipython -i '%'<cr>
 nnoremap <F6> :w<cr> :term pudb '%'<cr> 
 nnoremap <F7> :w<cr> :term flake8 '%'<cr>
 
-" Map D to run pydoc on current word
+" map D to run pydoc on current word
 nnoremap <buffer> D :<C-u>execute "term pydoc " . expand("<cword>")<CR>
 
-" Use deoplete
+" use deoplete
 " let g:deoplete#enable_at_startup = 1
 autocmd Filetype python call deoplete#enable()
 
-" Deactivate jedi-vim completion, only use other features
+" deactivate jedi-vim completion, only use other features
 let g:jedi#completions_enabled = 0
