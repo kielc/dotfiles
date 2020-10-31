@@ -3,8 +3,9 @@ alias {vi,vim,nvim}='~/bin/nvim.appimage'
 
 # ls
 alias ls='ls --group-directories-first --color=auto'
-alias ll='ls -lah --group-directories-first --color=auto'
+alias lsl='ls -l --group-directories-first --color=auto'
 alias la='ls -a --group-directories-first --color=auto'
+alias ll='ls -lah --group-directories-first --color=auto'
 alias l.='ls -d --group-directories-first  --color=auto .*'
 
 # grep color

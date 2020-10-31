@@ -42,8 +42,8 @@ nnoremap <F5> :w<cr> :term ipython -i '%'<cr>
 nnoremap <F6> :w<cr> :term pudb '%'<cr> 
 nnoremap <F7> :w<cr> :term flake8 '%'<cr>
 
-" map D to run pydoc on current word
-nnoremap <buffer> D :<C-u>execute "term pydoc " . expand("<cword>")<CR>
+" map F8 to run pydoc on current word
+nnoremap <buffer> <F8> :<C-u>execute "term pydoc " . expand("<cword>")<CR>
 
 " use deoplete
 " let g:deoplete#enable_at_startup = 1
