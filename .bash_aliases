@@ -24,8 +24,8 @@ alias cp="cp -i"
 alias mv='mv -i'
 
 # adding flags
-alias df='df -h'                        # human-readable sizes
-alias free='free -m'                    # show sizes in MB
+alias df='df -h'                        
+alias free='free -h'                   
 
 # git alias for dotfiles bare repo
 alias gitdf='/usr/bin/git --git-dir=$HOME/gitrepos/dotfiles --work-tree=$HOME'
