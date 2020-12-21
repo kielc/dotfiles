@@ -64,7 +64,15 @@ if [ -f ~/.fzf.bash ]; then
     source ~/.fzf.bash
     export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow"
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-    export FZF_ALT_C_COMMAND="fd --type d --hidden"
+    export FZF_ALT_C_COMMAND="fd --type d --hidden --follow"
+
+    _fzf_compgen_path() {
+      fd --type f --hidden --follow . "$1"
+    }
+
+    _fzf_compgen_dir() {
+      fd --type d --hidden --follow . "$1"
+    }
 fi
 
 # cabal path
