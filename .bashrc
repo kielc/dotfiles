@@ -75,5 +75,6 @@ if [ -f ~/.fzf.bash ]; then
     }
 fi
 
-# cabal path
+# path
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
