@@ -75,6 +75,6 @@ if [ -f ~/.fzf.bash ]; then
     }
 fi
 
-# path
+# environment variables
+export SUDO_EDITOR=~/bin/nvim.appimage
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cabal/bin:$PATH"
